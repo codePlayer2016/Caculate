@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.linzw.caculate.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/display_result"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/display_edit"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            ></TextView>
+
+    </LinearLayout>
+
+
+
+    <TableLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        >
+        <TableRow
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/c_button"
+
+                android:layout_weight="1"
+                android:text="C"
+                android:onClick="onClick"></Button >
+            <Button
+                android:id="@+id/dec_button"
+                android:layout_weight="1"
+                android:text="DEC"
+                android:onClick="onClick"></Button >
+            <Button
+                android:id="@+id/dot_button"
+                android:layout_weight="1"
+                android:text="."
+                android:onClick="onClick"></Button >
+            <Button
+                android:id="@+id/add_button"
+                android:layout_weight="1"
+                android:text="+"
+                android:onClick="onClick"></Button >
+        </TableRow>
+        <TableRow
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/btn_7"
+                android:text="7"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                ></Button >
+            <Button
+                android:id="@+id/btn_8"
+                android:text="8"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                ></Button >
+            <Button
+                android:id="@+id/btn_9"
+                android:text="9"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                ></Button >
+            <Button
+                android:id="@+id/btn_sub"
+                android:text="-"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                ></Button >
+        </TableRow>
+        <TableRow
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/btn_4"
+                android:text="4"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                ></Button >
+            <Button
+                android:id="@+id/btn_5"
+                android:text="5"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                ></Button >
+            <Button
+                android:id="@+id/btn_6"
+                android:text="6"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                ></Button >
+            <Button
+                android:id="@+id/btn_mult"
+                android:text="*"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                ></Button >
+        </TableRow>
+        <TableRow
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/btn_1"
+                android:text="1"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                ></Button >
+            <Button
+                android:id="@+id/btn_2"
+                android:text="2"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                ></Button >
+            <Button
+                android:id="@+id/btn_3"
+                android:text="3"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                ></Button >
+            <Button
+                android:id="@+id/btn_div"
+                android:text="/"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                ></Button >
+        </TableRow>
+        <TableRow
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/btn_0"
+                android:text="0"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                ></Button >
+            <Button
+                android:id="@+id/btn_equ"
+                android:text="="
+                android:layout_weight="3"
+                android:onClick="onClick"
+                ></Button >
+
+        </TableRow>
+    </TableLayout>
+
+
+</LinearLayout>
