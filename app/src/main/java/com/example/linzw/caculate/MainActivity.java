@@ -6,6 +6,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.javia.arity.Symbols;
+import org.javia.arity.SyntaxException;
 
 import static com.example.linzw.caculate.R.id.add_button;
 import static com.example.linzw.caculate.R.id.btn_0;
@@ -24,6 +28,8 @@ import static com.example.linzw.caculate.R.id.btn_mult;
 import static com.example.linzw.caculate.R.id.btn_sub;
 import static com.example.linzw.caculate.R.id.c_button;
 import static com.example.linzw.caculate.R.id.dec_button;
+import static com.example.linzw.caculate.R.id.display_edit;
+import static com.example.linzw.caculate.R.id.display_result;
 import static com.example.linzw.caculate.R.id.dot_button;
 
 public class MainActivity extends Activity {
@@ -39,9 +45,16 @@ public class MainActivity extends Activity {
             switch (view.getId())
             {
                 case  c_button:
+                {
+                    TextView display_zone=(TextView)findViewById(R.id.display_edit);
+                    display_zone.setText("");
+                    TextView format_zone=(TextView)findViewById(R.id.display_result);
+                    format_zone.setText("");
+                }
+                break;
                 case add_button:
                 case dot_button:
-                case dec_button:
+               // case dec_button:
                 case btn_0:
                 case btn_1:
                 case btn_2:
@@ -53,7 +66,6 @@ public class MainActivity extends Activity {
                 case  btn_8 :
                 case btn_9 :
                 case  btn_div:
-                case btn_equ:
                 case btn_mult:
                 case btn_sub:
                 {
@@ -70,6 +82,25 @@ public class MainActivity extends Activity {
                     Log.d("test","test6");
                     edit_display.setText(new_content_edit);
                     Log.d("test","test7");
+
+                }
+                break;
+                case btn_equ:
+                {
+
+                    try {
+                        TextView tw =(TextView)findViewById(display_edit);
+                        String  formal=tw.getText().toString();
+                        Symbols symbol=new Symbols();
+                        double formalContent=symbol.eval(formal);
+                        TextView ts =(TextView)findViewById(display_result);
+                        ts.setText(String.valueOf(formalContent));
+
+                    } catch (SyntaxException e)
+                    {
+                        Toast.makeText(this,"error",Toast.LENGTH_SHORT).show();
+                    }
+
 
                 }
                 break;
